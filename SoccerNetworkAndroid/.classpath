@@ -5,8 +5,12 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="E:/Android/httpclient-4.0.3.jar"/>
 	<classpathentry kind="lib" path="E:/Android/http-core-4.1.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/lib-gson"/>
+=======
+	<classpathentry kind="lib" path="libs/gson-2.5.jar"/>
+>>>>>>> f4406a5562c88a12d029cdc66665daa7130ac87c
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
