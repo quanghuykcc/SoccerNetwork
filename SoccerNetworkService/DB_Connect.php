@@ -12,7 +12,7 @@ class DB_Connect {
 
     // kết nối đến cơ sở dữ liệu
     public function connect() {
-        require_once 'include/config.php';
+        require_once 'config.php';
         // kêt nối đến mysql
         $con = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
         // chọn cơ sở dữ liệu
