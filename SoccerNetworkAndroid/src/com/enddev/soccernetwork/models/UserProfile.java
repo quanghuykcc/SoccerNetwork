@@ -1,4 +1,4 @@
-package com.enddev.soccernetwork.model;
+package com.enddev.soccernetwork.models;
 
 public class UserProfile {
 	private String user_id;
