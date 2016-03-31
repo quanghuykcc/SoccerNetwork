@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SoccerNetwork</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="login_account">Tài Khoản</string><string name="app_title">Soccer Network</string><string name="app_name">SoccerNetwork</string>
+    <string name="login_pass">Mật khẩu</string><string name="login_bt_login">Đăng nhập</string><string name="login_bt_cancel">Bỏ qua</string><string name="login_chk_pass">Ghi nhớ mật khẩu</string><string name="login_forget_pass">Quên mật khẩu ?</string><string name="register_account">Tài khoản (*)</string><string name="register_email">Email      </string><string name="register_pass">Mật khẩu (*)</string><string name="register_phone">SĐT (*)</string><string name="register_city">Thành phố (*)</string><string name="register_district">Quận - Huyện (*)</string><string name="hello_world">Hello world!</string>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <string name="yes">Có</string><string name="message_check_join_match">Bạn có muốn tham gia vào trận đấu này không?</string><string name="register_bt_register">Đăng kí</string>
+    
+    <string name="add_match_city">Thành phố</string><string name="add_match_district">Quận-Huyện</string><string name="add_match_field">Sân bóng</string><string name="add_match_max" >Số người tối đa</string><string name="add_match_price">Giá</string><string name="add_match_begin_time">Thời gian bắt đầu</string><string name="add_match_quantity">Số lượng người đã đăng ký</string><string name="no">Không</string>
+    
+    
+    
+    
+    
+    
+    
+    <string name="ok">OK</string><string name="back">Back</string><string name="add_match_finish_time">Thời gian kết thúc</string>
+    
+    
+    
 
 </resources>
