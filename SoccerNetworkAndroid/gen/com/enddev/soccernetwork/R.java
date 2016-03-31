@@ -10,96 +10,45 @@ package com.enddev.soccernetwork;
 public final class R {
     public static final class attr {
     }
-    public static final class color {
-        public static final int color_background=0x7f040000;
-        public static final int color_button_login=0x7f040002;
-        public static final int color_text=0x7f040001;
-    }
     public static final class drawable {
-        public static final int back=0x7f020000;
-        public static final int bg_button=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int bt_back_add_match=0x7f070003;
-        public static final int bt_cancel=0x7f070024;
-        public static final int bt_cancel_register=0x7f070016;
-        public static final int bt_login=0x7f070023;
-        public static final int bt_no_quit=0x7f07000e;
-        public static final int bt_ok_add_match=0x7f07000c;
-        public static final int bt_ok_search_slot=0x7f07001e;
-        public static final int bt_ok_verify=0x7f070020;
-        public static final int bt_register=0x7f070015;
-        public static final int bt_yes_quit=0x7f07000d;
-        public static final int cb_keep_pass=0x7f070022;
-        public static final int chk_empty_slot=0x7f07001c;
-        public static final int chk_verify_slot=0x7f07001d;
-        public static final int ed_from_price_search_slot=0x7f07001a;
-        public static final int ed_to_price_search_slot=0x7f07001b;
-        public static final int et_account_login=0x7f070021;
-        public static final int et_account_register=0x7f07000f;
-        public static final int et_code_verify=0x7f07001f;
-        public static final int et_email_register=0x7f070011;
-        public static final int et_max_add_match=0x7f070007;
-        public static final int et_member_joined=0x7f07000b;
-        public static final int et_pass_login=0x7f070008;
-        public static final int et_pass_register=0x7f070010;
-        public static final int et_phone_register=0x7f070012;
-        public static final int listview=0x7f070000;
-        public static final int maps_search_match=0x7f070002;
-        public static final int radio_all_search_slot=0x7f070018;
-        public static final int radio_by_price_search_slot=0x7f070019;
-        public static final int seekBar_price_search_slot=0x7f070017;
-        public static final int spinner_city_add_match=0x7f070004;
-        public static final int spinner_city_register=0x7f070013;
-        public static final int spinner_district_add_match=0x7f070005;
-        public static final int spinner_district_register=0x7f070014;
-        public static final int spinner_district_search=0x7f070001;
-        public static final int spinner_field_add_match=0x7f070006;
-        public static final int spinner_time_begin_add_match=0x7f070009;
-        public static final int spinner_time_finish_add_match=0x7f07000a;
-        public static final int tv_forget_pass=0x7f070025;
+        public static final int listview=0x7f060000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_search_macth=0x7f030001;
-        public static final int dialog_add_match=0x7f030002;
-        public static final int dialog_check_join_match=0x7f030003;
-        public static final int dialog_register=0x7f030004;
-        public static final int dialog_search_slot=0x7f030005;
-        public static final int dialog_verifycation=0x7f030006;
-        public static final int login_layout=0x7f030007;
     }
     public static final class string {
-        public static final int add_match_begin_time=0x7f050017;
-        public static final int add_match_city=0x7f050012;
-        public static final int add_match_district=0x7f050013;
-        public static final int add_match_field=0x7f050014;
-        public static final int add_match_finish_time=0x7f05001c;
-        public static final int add_match_max=0x7f050015;
-        public static final int add_match_price=0x7f050016;
-        public static final int add_match_quantity=0x7f050018;
-        public static final int app_name=0x7f050002;
-        public static final int app_title=0x7f050001;
-        public static final int back=0x7f05001b;
-        public static final int hello_world=0x7f05000e;
-        public static final int login_account=0x7f050000;
-        public static final int login_bt_cancel=0x7f050005;
-        public static final int login_bt_login=0x7f050004;
-        public static final int login_chk_pass=0x7f050006;
-        public static final int login_forget_pass=0x7f050007;
-        public static final int login_pass=0x7f050003;
-        public static final int message_check_join_match=0x7f050010;
-        public static final int no=0x7f050019;
-        public static final int ok=0x7f05001a;
-        public static final int register_account=0x7f050008;
-        public static final int register_bt_register=0x7f050011;
-        public static final int register_city=0x7f05000c;
-        public static final int register_district=0x7f05000d;
-        public static final int register_email=0x7f050009;
-        public static final int register_pass=0x7f05000a;
-        public static final int register_phone=0x7f05000b;
-        public static final int yes=0x7f05000f;
+        public static final int add_match_begin_time=0x7f040017;
+        public static final int add_match_city=0x7f040012;
+        public static final int add_match_district=0x7f040013;
+        public static final int add_match_field=0x7f040014;
+        public static final int add_match_finish_time=0x7f04001c;
+        public static final int add_match_max=0x7f040015;
+        public static final int add_match_price=0x7f040016;
+        public static final int add_match_quantity=0x7f040018;
+        public static final int app_name=0x7f040002;
+        public static final int app_title=0x7f040001;
+        public static final int back=0x7f04001b;
+        public static final int hello_world=0x7f04000e;
+        public static final int login_account=0x7f040000;
+        public static final int login_bt_cancel=0x7f040005;
+        public static final int login_bt_login=0x7f040004;
+        public static final int login_chk_pass=0x7f040006;
+        public static final int login_forget_pass=0x7f040007;
+        public static final int login_pass=0x7f040003;
+        public static final int message_check_join_match=0x7f040010;
+        public static final int no=0x7f040019;
+        public static final int ok=0x7f04001a;
+        public static final int register_account=0x7f040008;
+        public static final int register_bt_register=0x7f040011;
+        public static final int register_city=0x7f04000c;
+        public static final int register_district=0x7f04000d;
+        public static final int register_email=0x7f040009;
+        public static final int register_pass=0x7f04000a;
+        public static final int register_phone=0x7f04000b;
+        public static final int yes=0x7f04000f;
     }
     public static final class style {
         /** 
@@ -123,10 +72,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f050000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f050001;
     }
 }
