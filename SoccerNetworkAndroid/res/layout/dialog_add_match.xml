@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/bt_back_add_match"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"
+            android:contentDescription="@string/back" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_match_city"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinner_city_add_match"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_match_district"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinner_district_add_match"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/add_match_field"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinner_field_add_match"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:textSize="15sp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/add_match_max"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_max_add_match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:textSize="15sp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/add_match_price"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_pass_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:textSize="15sp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/add_match_begin_time"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinner_time_begin_add_match"
+                android:layout_width="146dp"
+                android:layout_height="36dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:textSize="15sp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/add_match_finish_time"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/spinner_time_finish_add_match"
+                android:layout_width="146dp"
+                android:layout_height="36dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.35"
+            android:orientation="horizontal"
+            android:textSize="15sp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/add_match_quantity"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_member_joined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="16sp" />
+        </LinearLayout>
+        
+        <Button 
+            android:id="@+id/bt_ok_add_match"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/color_button_login"
+            android:background="@drawable/bg_button"
+            />
+    </LinearLayout>
+
+</ScrollView>
