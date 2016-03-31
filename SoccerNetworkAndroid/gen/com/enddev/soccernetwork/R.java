@@ -45,8 +45,8 @@ public final class R {
         public static final int et_pass_login=0x7f070008;
         public static final int et_pass_register=0x7f070010;
         public static final int et_phone_register=0x7f070012;
-        public static final int listview=0x7f070000;
         public static final int maps_search_match=0x7f070002;
+        public static final int pager=0x7f070000;
         public static final int radio_all_search_slot=0x7f070018;
         public static final int radio_by_price_search_slot=0x7f070019;
         public static final int seekBar_price_search_slot=0x7f070017;
@@ -128,5 +128,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f060001;
+        public static final int MyActionBar=0x7f060002;
     }
 }
