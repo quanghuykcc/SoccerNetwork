@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="login_account">Tài Khoản</string>
+    <string name="username">Tài khoản</string>
     <string name="app_title">Soccer Network</string>
     <string name="app_name">SoccerNetwork</string>
-    <string name="login_pass">Mật khẩu</string>
-    <string name="login_bt_login">Đăng nhập</string>
-    <string name="login_bt_cancel">Bỏ qua</string>
+    <string name="password">Mật khẩu</string>
+    <string name="login_bt_login">ĐĂNG NHẬP</string>
+    <string name="login_bt_cancel">BỎ QUA</string>
     <string name="login_chk_pass">Ghi nhớ mật khẩu</string>
     <string name="login_forget_pass">Quên mật khẩu ?</string>
     <string name="register_account">Tài khoản (*)</string>
@@ -18,17 +18,17 @@
     <string name="hello_world">Hello world!</string>
     <string name="yes">Có</string>
     <string name="message_check_join_match">Bạn có muốn tham gia vào trận đấu này không?</string>
-    <string name="register_bt_register">Đăng kí</string>
-    <string name="add_match_city">Thành phố</string>
-    <string name="add_match_district">Quận-Huyện</string>
-    <string name="add_match_field">Sân bóng</string>
-    <string name="add_match_max">Số người tối đa</string>
-    <string name="add_match_price">Giá</string>
+    <string name="register_bt_register">ĐĂNG KÝ</string>
+    <string name="city">Thành phố</string>
+    <string name="district">Quận - Huyện</string>
+    <string name="field">Sân bóng</string>
+    <string name="max_slot">Số người tối đa</string>
+    <string name="price">Giá</string>
     <string name="add_match_begin_time">Thời gian bắt đầu</string>
     <string name="add_match_quantity">Số lượng người đã đăng ký</string>
     <string name="no">Không</string>
     <string name="ok">OK</string>
-    <string name="back">Back</string>
+    <string name="back">BACK</string>
     <string name="add_match_finish_time">Thời gian kết thúc</string>
     <string name="title_activity_match">MatchActivity</string>
     <string name="action_settings">Settings</string>
@@ -37,8 +37,18 @@
     <string name="just_now">Ngay bây giờ</string>
     <string name="minute_ago">phút trước</string>
     <string name="hour_ago">giờ trước</string>
-    <string name="day_ago">ngày trước trước</string>
+    <string name="day_ago">ngày trước</string>
     <string name="search_match">TÌM KIẾM TRẬN ĐẤU</string>
+<<<<<<< HEAD:SoccerNetwork/res/values/strings.xml
 	<string name="drawer_opened">Drawer Opened</string>
     <string name="drawer_closed">Drawer Closed</string>
+=======
+    <string name="search">TÌM KIẾM</string>
+    <string name="time_start">Thời gian bắt đầu</string>
+    <string name="app_title_uppercase">SOCCER NETWORK</string>
+    <string name="search_field">TÌM KIẾM SÂN BÓNG</string>
+    <string name="full_name">Tên đầy đủ (*)</string>
+    <string name="create_match">TẠO TRẬN ĐẤU</string>
+
+>>>>>>> 732b276fb6d7b85323f91586917f6612cf913621:SoccerNetworkAndroid/res/values/strings.xml
 </resources>

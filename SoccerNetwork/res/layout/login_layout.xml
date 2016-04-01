@@ -9,7 +9,7 @@
         android:layout_marginTop="20dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/app_title"
+        android:text="@string/app_title_uppercase"
         android:layout_gravity="center"
         android:gravity="center"
         android:textColor="@color/color_text"
@@ -27,7 +27,7 @@
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login_account"
+            android:text="@string/username"
             android:textColor="@color/color_text"
             android:textSize="18sp"
             android:layout_weight="3"
@@ -55,7 +55,7 @@
         <TextView 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login_pass"
+            android:text="@string/password"
             android:textColor="@color/color_text"
             android:textSize="18sp"
             android:layout_weight="3"
@@ -111,20 +111,22 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
              android:layout_weight="1"
+            android:textStyle="bold|italic"
             android:text="@string/login_bt_login"
             style="?android:attr/buttonStyle"
             android:background="@drawable/bg_button"
-            android:textColor="@color/color_button_login"
+            android:textColor="@color/color_text_button"
             />
         <Button 
-            android:id="@+id/bt_cancel"
+            android:id="@+id/bt_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/login_bt_cancel"
+            android:text="@string/register_bt_register"
             android:layout_weight="1"
+            android:textStyle="bold|italic"
             style="?android:attr/buttonStyle"
             android:background="@drawable/bg_button"
-            android:textColor="@color/color_button_login"
+            android:textColor="@color/color_text_button"
             />
         
     </LinearLayout>
