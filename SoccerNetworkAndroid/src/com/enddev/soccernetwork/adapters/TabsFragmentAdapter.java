@@ -3,7 +3,7 @@ package com.enddev.soccernetwork.adapters;
 import com.enddev.soccernetwork.fragments.AboutsFragment;
 import com.enddev.soccernetwork.fragments.MapsFragment;
 import com.enddev.soccernetwork.fragments.NewsFragment;
-import com.enddev.soccernetwork.fragments.SearchFragment;
+import com.enddev.soccernetwork.fragments.FieldsFragment;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,7 +21,7 @@ public class TabsFragmentAdapter extends FragmentPagerAdapter{
 		case 0:
 			return new NewsFragment();
 		case 1:
-			return new SearchFragment();
+			return new FieldsFragment();
 		case 2:
 			return new MapsFragment();
 		case 3:

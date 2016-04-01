@@ -34,7 +34,7 @@ public class MainSoccerActivity extends FragmentActivity implements TabListener{
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		actionBar.setHomeButtonEnabled(false);
 		actionBar.setDisplayHomeAsUpEnabled(false);
-		actionBar.setDisplayShowTitleEnabled(false);
+		actionBar.setDisplayShowTitleEnabled(false);	
 		actionBar.setDisplayShowHomeEnabled(false);
 		
 		actionBar.setStackedBackgroundDrawable(new ColorDrawable(Color.BLUE));

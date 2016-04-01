@@ -16,7 +16,7 @@ public class MapsFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View v = inflater.inflate(R.layout.dialog_add_match, container, false);
+		View v = inflater.inflate(R.layout.dialog_create_match, container, false);
 		return v;
 	}
 
