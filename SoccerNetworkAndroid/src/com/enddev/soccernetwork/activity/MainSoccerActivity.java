@@ -18,7 +18,7 @@ public class MainSoccerActivity extends FragmentActivity implements TabListener{
 	ViewPager viewPager;
 	ActionBar actionBar;
 	TabsFragmentAdapter adapter;
-	String tabs[] = {"News","Search","Maps","AboutUs"};
+	String tabs[] = {"News","Fields","Maps","About Us"};
 	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(@Nullable Bundle arg0) {

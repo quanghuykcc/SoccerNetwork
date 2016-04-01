@@ -19,4 +19,6 @@ public class SearchFragment extends Fragment{
 		View v = inflater.inflate(R.layout.dialog_search_slot, container, false);
 		return v;
 	}
+	
+	
 }

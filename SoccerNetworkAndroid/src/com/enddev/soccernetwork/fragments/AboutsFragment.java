@@ -16,7 +16,7 @@ public class AboutsFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View v = inflater.inflate(R.layout.dialog_check_join_match, container, false);
+		View v = inflater.inflate(R.layout.dialog_notice, container, false);
 		return v;
 	}
 
