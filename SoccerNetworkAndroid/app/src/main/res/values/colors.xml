@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#05BA88</color>
+    <color name="colorPrimaryDark">#05BA88</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#c8e8ff</color>
+
+    <color name="color_background">#FFFFFF</color>
+    <color name="color_background_button">#05BA88</color>
+    <color name="color_text">#000000</color>
+    <color name="color_text_button">#FFFFFF</color>
+    <color name="color_button_login">#05BA88</color>
+    <color name="color_bg_listview_item">#FFFFFF</color>
+    <color name="color_bg_listview">#FFFFFF</color>
+</resources>

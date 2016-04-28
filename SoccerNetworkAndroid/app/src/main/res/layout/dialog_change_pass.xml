@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/color_background_button"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="THAY ĐỔI MẬT KHẨU"
+            android:gravity="center"
+            android:textColor="@color/color_text_button"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:visibility="gone"
+            android:id="@+id/pgb_loading"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+            <EditText
+                android:id="@+id/et_old_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mật khẩu cũ"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+            <EditText
+                android:id="@+id/et_new_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mật khẩu mới"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+            <EditText
+                android:id="@+id/et_comfirm_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập lại mật khẩu mới"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_change_pass"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/color_text_button"
+            android:background="@drawable/bg_button"
+            android:text="OK"/>
+    </LinearLayout>
+
+</LinearLayout>

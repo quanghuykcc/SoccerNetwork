@@ -1,0 +1,93 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="font_fontFamily_medium">sans-serif-medium</string>
+    <string name="nav_item_prolife">TRANG CÁ NHÂN</string>
+    <string name="nav_item_eidt_profile">CẬP NHẬT THÔNG TIN</string>
+    <string name="nav_item_about_us">ABOUT US</string>
+    <string name="nav_item_home">TRANG CHÍNH</string>
+    <string name="nav_item_setting">CÀI ĐẶT</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_prolife</item>
+        <item>@string/nav_item_eidt_profile</item>
+        <item>@string/nav_item_setting</item>
+        <item>@string/nav_item_about_us</item>
+    </string-array>
+    <string name="logout">Đăng xuất</string>
+    <string name="not_yet_login">Bạn vẫn chưa đăng nhập</string>
+    <string name="title_aboutus">About Us</string>
+    <string name="title_changepass">Change pass</string>
+    <string name="title_editprofile">Edit Profile</string>
+    <string name="titlehome">Soccer Network</string>
+    <string name="logout_success">Bạn đã đăng xuất thành công</string>
+    <string name="title_activity_match">MatchActivity</string>
+    <string name="title_activity_field">FieldActivity</string>
+
+    <string name="account">Tài khoản</string>
+    <string name="app_title">Soccer Network</string>
+    <string name="app_name">Soccer Network</string>
+    <string name="password">Mật khẩu</string>
+    <string name="login">ĐĂNG NHẬP</string>
+    <string name="cancel">BỎ QUA</string>
+    <string name="remember_password">Ghi nhớ mật khẩu</string>
+    <string name="login_forget_pass">Quên mật khẩu ?</string>
+    <string name="account_require">Tài khoản (*)</string>
+    <string name="email">Email</string>
+    <string name="password_require">Mật khẩu (*)</string>
+    <string name="phone_require">SĐT (*)</string>
+    <string name="city_require">Thành phố (*)</string>
+    <string name="district_require">Quận/huyện (*)</string>
+    <string name="yes">Có</string>
+    <string name="message_check_join_match">Bạn có muốn tham gia vào trận đấu này không?</string>
+    <string name="register">ĐĂNG KÝ</string>
+    <string name="city">Thành phố</string>
+    <string name="district">Quận/huyện</string>
+    <string name="field">Sân bóng</string>
+    <string name="max_person">Số người tối đa</string>
+    <string name="begin_time">Thời gian bắt đầu</string>
+    <string name="attended_person">Số lượng người đã đăng ký</string>
+    <string name="no">Không</string>
+    <string name="ok">OK</string>
+    <string name="back">Back</string>
+    <string name="join_match">THAM GIA TRẬN ĐẤU</string>
+    <string name="finish_time">Thời gian kết thúc</string>
+    <string name="just_now">Ngay bây giờ</string>
+    <string name="minute_ago">phút trước</string>
+    <string name="hour_ago">giờ trước</string>
+    <string name="day_ago">ngày trước</string>
+    <string name="search_match">TÌM KIẾM TRẬN ĐẤU</string>
+    <string name="match">Trận bóng</string>
+    <string name="map">Bản đồ</string>
+    <string name="time">Thời gian</string>
+    <string name="price">Giá</string>
+    <string name="joined">Đã tham gia</string>
+    <string name="address">Địa chỉ</string>
+    <string name="filter_search">LỌC TÌM KIẾM</string>
+    <string name="search">TÌM KIẾM</string>
+    <string name="app_title_upper">SOCCER NETWORK</string>
+    <string name="confirm">XÁC NHẬN</string>
+    <string name="login_message">Chúc mừng! Bạn đã đăng nhập thành công</string>
+    <string name="full_name_require">Tên đầy đủ (*)</string>
+    <string name="operating_time">Thời gian hoạt động</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="search_field">TÌM KIẾM SÂN BÓNG</string>
+    <string name="add_match">TẠO TRẬN ĐẤU</string>
+    <string name="login_fail">Tài khoản hoặc mật khẩu không chính xác</string>
+    <string name="register_fail">Lỗi đăng ký tài khoản</string>
+    <string name="register_success">Chúc mừng! Bạn đã đăng ký thành công</string>
+    <string name="match_upper">TRẬN BÓNG</string>
+    <string name="person_register">Người đăng ký</string>
+    <string name="number_attended">Số người tham gia</string>
+    <string name="phone_contact">Số điện thoại</string>
+    <string name="hour_begin">Giờ bắt đầu</string>
+    <string name="hour_end">Giờ kết thúc</string>
+    <string name="date_start">Ngày thi đấu</string>
+    <string name="field_upper">SÂN BÓNG</string>
+    <string name="key_google_maps">AIzaSyDEmK3dYOIXZ-_OQzFVEYeUL9nEflG1HBs</string>
+
+</resources>

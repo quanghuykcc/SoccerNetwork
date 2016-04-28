@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:scrollbars="vertical"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout">
+
+            <kcc.soccernetwork.utils.RoundedImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/map_google"
+                android:id="@+id/imv_user_avatar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_edit_avatar"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_edit_avatar"
+                android:layout_alignBottom="@+id/imv_user_avatar"
+                android:layout_toRightOf="@+id/imv_user_avatar"
+                android:layout_toEndOf="@+id/imv_user_avatar" />
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_edit_profile"
+                android:src="@drawable/ic_change_profile"
+                android:layout_marginRight="10dp"
+                android:layout_alignBottom="@+id/imv_user_avatar"
+                android:layout_toLeftOf="@+id/imv_user_avatar"
+                android:layout_toStartOf="@+id/imv_user_avatar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/color_text_button"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/txt_full_name"
+
+                android:layout_below="@+id/imv_user_avatar" />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/linearLayout"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+
+            <TableLayout
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:stretchColumns="*"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Kỹ thuật" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:isIndicator="true"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/rtb_skill"
+                        android:numStars="5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tv_skill"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Uy tín" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:isIndicator="true"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rtb_prestige"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:layout_marginRight="5dp"
+                        android:focusable="false"
+                        android:numStars="5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tv_prestige" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:text="Thân thiện" />
+
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:isIndicator="true"
+                        android:layout_marginRight="5dp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:id="@+id/rtb_friendly"
+                        android:focusable="false"
+                        android:numStars="5" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/tv_friendly" />
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:shrinkColumns="*"
+            android:paddingLeft="20dp"
+            android:layout_below="@+id/linearLayout">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_username"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/imv_username" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:text="Tên đăng nhập"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/txt_username" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_password"
+                    android:id="@+id/imv_password" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:text="Mật khẩu" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/txt_password" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imv_change_password"
+                    android:src="@drawable/ic_setting_light"
+                    android:layout_gravity="center_vertical"
+                    android:layout_column="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_email"
+                    android:id="@+id/imv_email" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Email"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/txt_email" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_phone_number"
+                    android:id="@+id/imv_phone_number" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:text="Số điện thoại"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/txt_phone_number" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imv_edit_phone_number"
+                    android:src="@drawable/ic_setting_light"
+                    android:layout_gravity="center_vertical"
+                    android:layout_column="3" />
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_district"
+                    android:layout_height="40dp"
+                    android:id="@+id/imv_district" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Quận / huyện"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/txt_district" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_district"
+                    android:layout_height="40dp"
+                    android:id="@+id/imv_city" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:text="Thành phố"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/txt_city" />
+            </TableRow>
+
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

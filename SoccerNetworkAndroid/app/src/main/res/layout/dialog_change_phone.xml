@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:background="@color/color_background_button"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="ĐỔI SỐ ĐIỆN THOẠI"
+            android:gravity="center"
+            android:textColor="@color/color_text_button"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:visibility="gone"
+            android:id="@+id/pgb_loading"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+            <EditText
+                android:id="@+id/et_new_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SDT mới"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            >
+            <EditText
+                android:id="@+id/et_comfirm_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nhập lại SDT mới"
+                android:maxLines="1"
+                android:inputType="numberDecimal"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_change_phone"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/color_text_button"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:background="@drawable/bg_button"
+            android:text="OK"/>
+    </LinearLayout>
+
+</LinearLayout>

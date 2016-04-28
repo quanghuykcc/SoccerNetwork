@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="45dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:textStyle="bold|italic"
+			android:textSize="20sp"
+			android:gravity="center"
+			android:background="@color/color_background_button"
+			android:textColor="@color/color_text_button"
+			android:text="@string/filter_search" />
+	</LinearLayout>
+
+	<TableLayout
+		android:layout_width="match_parent"
+		android:stretchColumns="*"
+		android:layout_margin="10dp"
+		android:layout_height="wrap_content">
+
+		<TableRow
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/city_require"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+			<Spinner
+                android:id="@+id/spinner_city_add_match"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+		</TableRow>
+
+		<TableRow
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/field"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+			<Spinner
+                android:id="@+id/spinner_field_add_match"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+		</TableRow>
+
+		<TableRow
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/district_require"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+
+			<Spinner
+                android:id="@+id/spinner_district_add_match"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+		</TableRow>
+
+		<TableRow
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/price"
+                android:textColor="@color/color_text"
+                android:textSize="16sp" />
+		</TableRow>
+
+		<TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+			<SeekBar
+                android:id="@+id/seekBar_price_search_slot"
+                android:layout_width="match_parent"
+				android:layout_span="2"
+                android:layout_height="wrap_content"
+				android:indeterminate="false" />
+		</TableRow>
+
+		<TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thời gian bắt đầu"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/color_text"
+                android:textSize="16sp"
+                />
+
+		</TableRow>
+
+		<TableRow
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<SeekBar
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_span="2"
+				android:id="@+id/seekBar" />
+		</TableRow>
+
+		<TableRow
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<CheckBox
+                android:id="@+id/chk_empty_slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chỉ hiển thị các trận đấu còn trống"
+				android:layout_span="2"
+                android:textColor="@color/color_text"
+                android:textSize="16sp"
+                />
+		</TableRow>
+
+		<TableRow
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<CheckBox
+                android:id="@+id/chk_verify_slot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+				android:layout_span="2"
+                android:text="Chỉ hiển thị các trận đấu đã xác nhận"
+                android:textColor="@color/color_text"
+                android:textSize="16sp"
+                />
+		</TableRow>
+	</TableLayout>
+
+	<Button
+	    android:id="@+id/btn_accept_search_match"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/search"
+	    android:textColor="@color/color_text_button"
+	    android:textSize="20sp"
+		android:textStyle="bold|italic"
+		android:layout_marginBottom="10dp"
+	    android:background="@drawable/bg_button"
+	    android:layout_gravity="center"
+	    android:gravity="center"
+	    />
+
+</LinearLayout>
