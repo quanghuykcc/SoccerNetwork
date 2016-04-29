@@ -38,17 +38,16 @@ import kcc.soccernetwork.dialogs.ChangePhoneNumberDialog;
 import kcc.soccernetwork.objects.Rating;
 import kcc.soccernetwork.objects.UserProfile;
 import kcc.soccernetwork.utils.CheckLogin;
-import kcc.soccernetwork.utils.GoogleMapFunctions;
-import kcc.soccernetwork.utils.ImageLoader;
 import kcc.soccernetwork.utils.LoadImageTask;
 import kcc.soccernetwork.utils.ServiceConnect;
 import kcc.soccernetwork.utils.UtilConstants;
 
 
-public class FragmentEditProfile extends Fragment implements View.OnClickListener {
+public class FragmentEditProfile extends Fragment implements View.OnClickListener, ChangePhoneNumberDialog.OnChangePhoneistener {
     UserProfile userLogin;
     RatingBar skill, prestige, friendly;
     TextView skillTv, prestigeTv, friendlyTv;
+    TextView phoneNumber;
     public FragmentEditProfile() {
         userLogin = CheckLogin.getInstance().getLoginUser();
     }
@@ -60,13 +59,24 @@ public class FragmentEditProfile extends Fragment implements View.OnClickListene
     }
 
     @Override
+    public void onChangePhoneSuccess(String phone) {
+        phoneNumber.setText(phone);
+        CheckLogin.getInstance().getLoginUser().setPhone_number(phone);
+    }
+
+    @Override
+    public void onChangePhoneFailed() {
+
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.user_profile_layout, container, false);
         TextView userName = (TextView) rootView.findViewById(R.id.txt_username);
         TextView password = (TextView) rootView.findViewById(R.id.txt_password);
         TextView email = (TextView) rootView.findViewById(R.id.txt_email);
-        TextView phoneNumber = (TextView) rootView.findViewById(R.id.txt_phone_number);
+        phoneNumber = (TextView) rootView.findViewById(R.id.txt_phone_number);
         TextView district = (TextView) rootView.findViewById(R.id.txt_district);
         TextView fullName = (TextView) rootView.findViewById(R.id.txt_full_name);
         ImageView avatar = (ImageView) rootView.findViewById(R.id.imv_user_avatar);
@@ -141,7 +151,7 @@ public class FragmentEditProfile extends Fragment implements View.OnClickListene
     }
 
     private void showChangePhoneNumberDialog() {
-        DialogFragment changePhoneNumberDialog = new ChangePhoneNumberDialog((getActivity()));
+        DialogFragment changePhoneNumberDialog = new ChangePhoneNumberDialog(getActivity(), this);
         changePhoneNumberDialog.show(getActivity().getFragmentManager(), "");
     }
 

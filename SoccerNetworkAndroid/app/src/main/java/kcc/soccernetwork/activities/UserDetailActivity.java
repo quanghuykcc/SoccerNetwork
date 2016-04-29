@@ -7,9 +7,9 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -33,8 +33,6 @@ import kcc.soccernetwork.R;
 import kcc.soccernetwork.dialogs.RatingDialog;
 import kcc.soccernetwork.objects.Rating;
 import kcc.soccernetwork.objects.UserDetail;
-import kcc.soccernetwork.objects.UserProfile;
-import kcc.soccernetwork.utils.ImageLoader;
 import kcc.soccernetwork.utils.LoadImageTask;
 import kcc.soccernetwork.utils.ServiceConnect;
 import kcc.soccernetwork.utils.UtilConstants;
@@ -102,6 +100,8 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
             case R.id.fab_rating:
                 showRatingDialog();
                 break;
+            case R.id.bt_change_phone:
+
         }
     }
 

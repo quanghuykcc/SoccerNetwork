@@ -4,16 +4,18 @@ package kcc.soccernetwork.adapters;
  * Created by Administrator on 4/5/2016.
  */
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import kcc.soccernetwork.R;
-import kcc.soccernetwork.objects.NavDrawerItem;
+
 import java.util.Collections;
 import java.util.List;
+
+import kcc.soccernetwork.R;
+import kcc.soccernetwork.objects.NavDrawerItem;
 
 
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
@@ -44,6 +46,7 @@ public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDraw
         NavDrawerItem current = data.get(position);
         holder.title.setText(current.getTitle());
         holder.icon.setImageResource(current.getIconId());
+
     }
 
     @Override
