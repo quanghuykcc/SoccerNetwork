@@ -95,9 +95,9 @@ public class FragmentEditProfile extends Fragment implements View.OnClickListene
         ImageView changePassword = (ImageView) rootView.findViewById(R.id.imv_change_password);
         ImageView changPhoneNumber = (ImageView) rootView.findViewById(R.id.imv_edit_phone_number);
         FloatingActionButton editAvatar = (FloatingActionButton) rootView.findViewById(R.id.fab_edit_avatar);
-        editAvatar.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#0277BD")));
+        editAvatar.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFFFFF")));
         FloatingActionButton editProfile = (FloatingActionButton) rootView.findViewById(R.id.fab_edit_profile);
-        editProfile.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#0277BD")));
+        editProfile.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFFFFF")));
         changePassword.setOnClickListener(this);
         changPhoneNumber.setOnClickListener(this);
         editAvatar.setOnClickListener(this);

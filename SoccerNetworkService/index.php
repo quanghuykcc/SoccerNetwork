@@ -161,6 +161,36 @@ if (isset($_POST['tag']) && $_POST['tag'] != '') {
         $field_id = $_POST['field_id'];
         $db->get_matches_by_field($field_id);
     }
+	else if($tag=='get_field_by_district')
+	{
+	    require_once 'field_function.php';
+		$db=new FIELD_FUNCTION();
+		$district_id=$_POST['district_id'];
+		$db->get_field_by_district($district_id);
+	}
+	else if($tag=='get_field_by_city')
+	{
+	   require_once 'field_function.php';
+		$db=new FIELD_FUNCTION();
+		$city_id=$_POST['city_id'];
+		$db->get_field_by_district($city_id);
+	}
+	else if($tag=='get_district_by_city_id')
+	{
+	    require_once 'district_function.php';
+        $db = new DISTRICT_FUNCTION();
+		$city_id=$_POST["city_id"];
+        $db->get_district_by_city_id($city_id);
+	}
+	else if($tag=="search_match")
+	{
+        require_once 'match_function.php';
+        $db = new MATCH_FUNCTION();
+        $field_id = $_POST['field_id'];
+		$price=$_POST['price'];
+		$start_time=$_POST['$start_time'];
+        $db->search_match($field_id,$price,$start_time);
+	}
 }
 
 ?>

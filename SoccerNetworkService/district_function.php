@@ -27,7 +27,22 @@
 				echo json_encode($responce);
 			}
 		}
-
+       function get_district_by_city_id($city_id) {
+			mysql_query("set names 'utf8'");
+			$result = mysql_query("SELECT * FROM districts where city_id='$city_id'");
+			$no_of_rows = mysql_num_rows($result);
+			if ($no_of_rows > 0) {
+				while ($row = mysql_fetch_assoc($result)) {
+					    $responce[] = $row;
+				}
+				echo json_encode($responce);
+			}
+			else {
+				$responce["code"] = 0;
+				$responce["message"] = "Không có quận / huyện được tìm thấy";
+				echo json_encode($responce);
+			}
+		} 
 		
 
 	}

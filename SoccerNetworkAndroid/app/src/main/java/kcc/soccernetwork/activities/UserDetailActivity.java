@@ -66,7 +66,7 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
         friendlyDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
         avatar = (ImageView) findViewById(R.id.imv_user_avatar);
         FloatingActionButton ratingButton = (FloatingActionButton) findViewById(R.id.fab_rating);
-        ratingButton.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#0277BD")));
+        ratingButton.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFFFFF")));
         getSupportActionBar().setTitle("THÔNG TIN NGƯỜI DÙNG");
         ratingButton.setOnClickListener(this);
         Intent intent = getIntent();
