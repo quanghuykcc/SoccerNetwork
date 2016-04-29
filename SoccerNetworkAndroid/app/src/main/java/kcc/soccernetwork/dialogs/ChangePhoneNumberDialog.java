@@ -142,7 +142,7 @@ public class ChangePhoneNumberDialog extends DialogFragment implements View.OnCl
         protected void onPostExecute(ResponceMessage responceMessage) {
             if (responceMessage != null && responceMessage.getMessage() != null) {
                 if (responceMessage.getCode() == 1) {
-                    Toast.makeText(mActivity, "Thay đổi số điện thoại.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(mActivity, "Thay đổi số điện thoại thành công", Toast.LENGTH_LONG).show();
                     mChangePhoneListener.onChangePhoneSuccess(newPhoneStr);
                     dismiss();
                 }

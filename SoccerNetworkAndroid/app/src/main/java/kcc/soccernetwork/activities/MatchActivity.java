@@ -148,7 +148,13 @@ public class MatchActivity extends AppCompatActivity implements View.OnClickList
                     openLoginDialog();
                 }
                 else {
-                    openJoinMatchDialog();
+                    if (match.getMaximum_players().trim().equals(match.getAttended().trim())) {
+                        Toast.makeText(this, "Trận đấu hiện tại đã đầy người chơi", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        openJoinMatchDialog();
+                    }
+
                 }
                 break;
             case R.id.imv_field:

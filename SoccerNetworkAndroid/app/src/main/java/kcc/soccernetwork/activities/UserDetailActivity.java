@@ -59,11 +59,11 @@ public class UserDetailActivity extends AppCompatActivity implements View.OnClic
         prestigeTv = (TextView) findViewById(R.id.tv_prestige);
         friendlyTv = (TextView) findViewById(R.id.tv_friendly);
         Drawable skillDrawable = skillRating.getProgressDrawable();
-        skillDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        skillDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         Drawable prestigeDrawable = prestigeRating.getProgressDrawable();
-        prestigeDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        prestigeDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         Drawable friendlyDrawable = friendlyRating.getProgressDrawable();
-        friendlyDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        friendlyDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         avatar = (ImageView) findViewById(R.id.imv_user_avatar);
         FloatingActionButton ratingButton = (FloatingActionButton) findViewById(R.id.fab_rating);
         ratingButton.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#FFFFFF")));

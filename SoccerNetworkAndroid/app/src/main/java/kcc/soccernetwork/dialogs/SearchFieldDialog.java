@@ -183,7 +183,7 @@ public class SearchFieldDialog extends DialogFragment implements View.OnClickLis
                 districtAdapter.notifyDataSetChanged();
             }
             else {
-                Toast.makeText(activity, "Không có quận / huyện được tìm thấy", Toast.LENGTH_LONG).show();
+                //Toast.makeText(activity, "Không có quận / huyện được tìm thấy", Toast.LENGTH_LONG).show();
             }
 
 

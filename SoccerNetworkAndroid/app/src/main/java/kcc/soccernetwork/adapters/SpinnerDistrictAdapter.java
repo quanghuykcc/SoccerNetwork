@@ -39,6 +39,7 @@ public class SpinnerDistrictAdapter extends ArrayAdapter<District> {
     public View getView(int position, View convertView, ViewGroup parent) {
         TextView label = new TextView(context);
         label.setTextColor(Color.BLACK);
+        label.setTextSize(16);
         label.setText(districts.get(position).getDistrict_name());
         return label;
     }
@@ -56,6 +57,7 @@ public class SpinnerDistrictAdapter extends ArrayAdapter<District> {
                                 ViewGroup parent) {
         TextView label = new TextView(context);
         label.setTextColor(Color.BLACK);
+        label.setTextSize(16);
         label.setText(districts.get(position).getDistrict_name());
         return label;
     }

@@ -54,6 +54,15 @@ public class MatchItemSmallAdapter extends RecyclerView.Adapter<MatchItemSmallAd
         timeFunctions = new TimeFunctions();
     }
 
+    public void addNewMatch(MatchItem matchItem) {
+        if (mMatchItemList == null) {
+            mMatchItemList = new ArrayList<MatchItem>();
+        }
+        mMatchItemList.add(0, matchItem);
+        notifyDataSetChanged();
+    }
+
+
     public void setMatchItemList(ArrayList<MatchItem> matchItemList) {
         mMatchItemList = matchItemList;
     }

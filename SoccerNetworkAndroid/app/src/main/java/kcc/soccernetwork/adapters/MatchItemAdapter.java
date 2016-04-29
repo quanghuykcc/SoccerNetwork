@@ -14,6 +14,7 @@ import java.util.Date;
 
 import kcc.soccernetwork.R;
 import kcc.soccernetwork.objects.MatchItem;
+import kcc.soccernetwork.objects.SlotItem;
 import kcc.soccernetwork.utils.ImageLoader;
 import kcc.soccernetwork.utils.LoadImageTask;
 import kcc.soccernetwork.utils.TimeFunctions;

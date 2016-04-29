@@ -48,7 +48,7 @@ import kcc.soccernetwork.utils.RecyclerClickListener;
 import kcc.soccernetwork.utils.ServiceConnect;
 import kcc.soccernetwork.utils.UtilConstants;
 
-public class FieldActivity extends AppCompatActivity implements View.OnClickListener {
+public class FieldActivity extends AppCompatActivity implements View.OnClickListener, AddMatchDialog.AddMatchListener {
     Button addMatchBtn;
     FieldItem fieldItem;
     ArrayList<MatchItem> matchItemList;
@@ -100,8 +100,8 @@ public class FieldActivity extends AppCompatActivity implements View.OnClickList
             new MatchGetterTask().execute(fieldItem.getField_id());
             operatingTime.setText(fieldItem.getOpen_time() + " đến " + fieldItem.getClose_time());
             address.setText(fieldItem.getAddress());
-            district.setText(fieldItem.getCity_name());
-            city.setText(fieldItem.getDistrict_name());
+            city.setText(fieldItem.getCity_name());
+            district.setText(fieldItem.getDistrict_name());
             phone.setText(fieldItem.getPhone_number());
             fieldImage.setImageResource(R.drawable.no_avatar);
             fieldName.setText(fieldItem.getField_name());
@@ -110,6 +110,11 @@ public class FieldActivity extends AppCompatActivity implements View.OnClickList
 
         }
         getSupportActionBar().setTitle(getString(R.string.field) + " " + fieldItem.getField_name());
+    }
+
+    @Override
+    public void OnAddMatchSuccess(MatchItem matchItem) {
+        matchItemAdapter.addNewMatch(matchItem);
     }
 
     @Override
@@ -126,7 +131,7 @@ public class FieldActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void openAddMatchDialog() {
-        DialogFragment addMatchDialog = new AddMatchDialog(this, fieldItem);
+        DialogFragment addMatchDialog = new AddMatchDialog(this, fieldItem, this);
         addMatchDialog.show(getFragmentManager(), "");
     }
 

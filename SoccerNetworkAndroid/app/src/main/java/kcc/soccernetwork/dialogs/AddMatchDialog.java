@@ -54,12 +54,18 @@ public class AddMatchDialog extends DialogFragment implements View.OnClickListen
     int month;
     int year;
     FieldItem fieldItem;
-    public AddMatchDialog(Activity activity, FieldItem fieldItem) {
+    public AddMatchDialog(Activity activity, FieldItem fieldItem, AddMatchListener addMatchListener) {
         super();
         this.activity = activity;
         this.fieldItem = fieldItem;
+        this.addMatchListener = addMatchListener;
     }
 
+    public interface AddMatchListener {
+        public void OnAddMatchSuccess(MatchItem matchItem);
+    }
+
+    private AddMatchListener addMatchListener;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -195,7 +201,7 @@ public class AddMatchDialog extends DialogFragment implements View.OnClickListen
             return false;
         }
 
-        if (startDate.getTimeInMillis() > endDate.getTimeInMillis()) {
+        if (startDate.getTimeInMillis() >= endDate.getTimeInMillis()) {
             Toast.makeText(getActivity(), "Thời gian bắt đầu phải trước thời gian kết thúc", Toast.LENGTH_LONG).show();
             return false;
         }
@@ -238,10 +244,13 @@ public class AddMatchDialog extends DialogFragment implements View.OnClickListen
         protected void onPostExecute(MatchItem matchItem) {
             if (matchItem == null || matchItem.getFull_name() == null) {
                 Toast.makeText(activity, "Tạo trận đấu thất bại", Toast.LENGTH_LONG).show();
+
             }
             else {
                 Toast.makeText(activity, "Tạo trận đấu mới thành công", Toast.LENGTH_LONG).show();
                 dismiss();
+                addMatchListener.OnAddMatchSuccess(matchItem);
+
             }
         }
     }

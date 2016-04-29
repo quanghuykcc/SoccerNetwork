@@ -60,8 +60,8 @@ public class FieldItemAdapter extends RecyclerView.Adapter<FieldItemAdapter.Fiel
         FieldItem fieldItem = fieldItemList.get(position);
         holder.operatingTime.setText(fieldItem.getOpen_time() + " đến " + fieldItem.getClose_time());
         holder.address.setText(fieldItem.getAddress());
-        holder.district.setText(fieldItem.getCity_name());
-        holder.city.setText(fieldItem.getDistrict_name());
+        holder.city.setText(fieldItem.getCity_name());
+        holder.district.setText(fieldItem.getDistrict_name());
         holder.phone.setText(fieldItem.getPhone_number());
         holder.fieldImage.setImageResource(R.drawable.no_avatar);
         holder.fieldName.setText(fieldItem.getField_name());

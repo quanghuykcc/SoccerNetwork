@@ -13,6 +13,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,11 +88,11 @@ public class FragmentEditProfile extends Fragment implements View.OnClickListene
         prestige = (RatingBar) rootView.findViewById(R.id.rtb_prestige);
         friendly = (RatingBar) rootView.findViewById(R.id.rtb_friendly);
         Drawable skillDrawable = skill.getProgressDrawable();
-        skillDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        skillDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         Drawable prestigeDrawable = prestige.getProgressDrawable();
-        prestigeDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        prestigeDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         Drawable friendlyDrawable = friendly.getProgressDrawable();
-        friendlyDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        friendlyDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         ImageView changePassword = (ImageView) rootView.findViewById(R.id.imv_change_password);
         ImageView changPhoneNumber = (ImageView) rootView.findViewById(R.id.imv_edit_phone_number);
         FloatingActionButton editAvatar = (FloatingActionButton) rootView.findViewById(R.id.fab_edit_avatar);
@@ -185,14 +186,17 @@ public class FragmentEditProfile extends Fragment implements View.OnClickListene
                         switch (ratingType) {
                             case 0:
                                 skill.setRating(value);
+                                Log.i("SoccerNetwork", ratings.get(i).getValue());
                                 skillTv.setText(ratings.get(i).getValue());
                                 break;
                             case 1:
                                 prestige.setRating(value);
+                                Log.i("SoccerNetwork", ratings.get(i).getValue());
                                 prestigeTv.setText(ratings.get(i).getValue());
                                 break;
                             case 2:
                                 friendly.setRating(value);
+                                Log.i("SoccerNetwork", ratings.get(i).getValue());
                                 friendlyTv.setText(ratings.get(i).getValue());
                                 break;
                         }

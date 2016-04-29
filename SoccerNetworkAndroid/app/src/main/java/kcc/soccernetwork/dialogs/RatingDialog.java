@@ -101,11 +101,11 @@ public class RatingDialog extends DialogFragment implements View.OnClickListener
         friendlyRating = (RatingBar) view.findViewById(R.id.rtb_friendly);
         pgbLoading = (ProgressBar) view.findViewById(R.id.pgb_loading);
         Drawable skillDrawable = skillRating.getProgressDrawable();
-        skillDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        skillDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         Drawable prestigeDrawable = prestigeRating.getProgressDrawable();
-        prestigeDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        prestigeDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         Drawable friendlyDrawable = friendlyRating.getProgressDrawable();
-        friendlyDrawable.setColorFilter(Color.parseColor("#0277BD"), PorterDuff.Mode.SRC_ATOP);
+        friendlyDrawable.setColorFilter(Color.parseColor("#05BA88"), PorterDuff.Mode.SRC_ATOP);
         Button ratingButton = (Button) view.findViewById(R.id.btn_rating);
         ratingButton.setOnClickListener(this);
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

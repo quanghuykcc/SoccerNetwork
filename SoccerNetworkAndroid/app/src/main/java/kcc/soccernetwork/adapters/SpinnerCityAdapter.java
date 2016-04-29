@@ -37,6 +37,7 @@ public class SpinnerCityAdapter extends ArrayAdapter<City> {
     public View getView(int position, View convertView, ViewGroup parent) {
         TextView label = new TextView(context);
         label.setTextColor(Color.BLACK);
+        label.setTextSize(16);
         label.setText(cities.get(position).getCity_name());
         return label;
     }
@@ -54,6 +55,7 @@ public class SpinnerCityAdapter extends ArrayAdapter<City> {
                                 ViewGroup parent) {
         TextView label = new TextView(context);
         label.setTextColor(Color.BLACK);
+        label.setTextSize(16);
         label.setText(cities.get(position).getCity_name());
 
         return label;

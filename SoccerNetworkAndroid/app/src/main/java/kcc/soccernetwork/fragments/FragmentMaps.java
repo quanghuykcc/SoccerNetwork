@@ -2,6 +2,7 @@ package kcc.soccernetwork.fragments;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -10,6 +11,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +23,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.google.gson.stream.JsonReader;
@@ -31,9 +35,11 @@ import org.apache.http.message.BasicNameValuePair;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 import kcc.soccernetwork.R;
+import kcc.soccernetwork.activities.FieldActivity;
 import kcc.soccernetwork.objects.FieldItem;
 import kcc.soccernetwork.utils.GoogleMapFunctions;
 import kcc.soccernetwork.utils.ServiceConnect;
@@ -42,12 +48,12 @@ import kcc.soccernetwork.utils.UtilConstants;
 public class FragmentMaps extends Fragment implements LocationListener{
     GoogleMap maps;
     ArrayList<FieldItem> fieldItemList;
+    private HashMap<Marker, Integer> markerHashMap = new HashMap<Marker, Integer>();
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_maps, container, false);
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getContext());
-
         // Showing status
         if(status!=ConnectionResult.SUCCESS){ // Google Play Services are not available
             int requestCode = 10;
@@ -64,6 +70,9 @@ public class FragmentMaps extends Fragment implements LocationListener{
             // Enabling MyLocation Layer of Google Map
             maps.setMyLocationEnabled(true);
             maps.getUiSettings().setZoomControlsEnabled(true);
+
+
+
             // Getting LocationManager object from System Service LOCATION_SERVICE
             LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 
@@ -144,7 +153,7 @@ public class FragmentMaps extends Fragment implements LocationListener{
         }
 
         @Override
-        protected void onPostExecute(ArrayList<FieldItem> fieldItems) {
+        protected void onPostExecute(final ArrayList<FieldItem> fieldItems) {
             GoogleMapFunctions googleMapFunctions = new GoogleMapFunctions(maps, getActivity());
             for (int i = 0; i < fieldItems.size(); i++) {
                 double latitude = Double.parseDouble(fieldItems.get(i).getLatitude());
@@ -152,7 +161,26 @@ public class FragmentMaps extends Fragment implements LocationListener{
                 String fieldName = fieldItems.get(i).getField_name();
                 String address = fieldItems.get(i).getAddress();
                 googleMapFunctions.addMarker(latitude, longitude, fieldName, address);
+                MarkerOptions markerOptions = GoogleMapFunctions.createMarkerOptions(latitude, longitude, fieldName, address);
+                Marker marker = maps.addMarker(markerOptions);
+                markerHashMap.put(marker, i);
             }
+            maps.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                @Override
+                public void onInfoWindowClick(Marker marker) {
+                    String fieldName = marker.getTitle();
+                    for (int i = 0; i < fieldItems.size(); i++) {
+                        if (fieldItems.get(i).getField_name().equals(fieldName)) {
+                            Intent fieldIntent = new Intent(getActivity(), FieldActivity.class);
+                            fieldIntent.putExtra("FieldItem", fieldItemList.get(i));
+                            startActivity(fieldIntent);
+                            break;
+                        }
+                    }
+
+                }
+            });
+
         }
     }
 
