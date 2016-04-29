@@ -201,7 +201,7 @@ public class RegisterDialog extends DialogFragment implements View.OnClickListen
                         Log.i("Upload", tempPath);
                         new UploadAvatarTask().execute(responceMessage.getMessage() + "");
                     }
-                    Snackbar.make(registerBtn, getString(R.string.register_success), Snackbar.LENGTH_LONG).show();
+                    Toast.makeText(mActivity, getString(R.string.register_success), Toast.LENGTH_LONG).show();
                     dismiss();
                 }
                 else {

@@ -34,7 +34,9 @@ public class SearchMatchDialog extends DialogFragment implements View.OnClickLis
         Button searchMatchBtn = (Button) view.findViewById(R.id.btn_accept_search_match);
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setView(view);
-        return builder.create();
+        Dialog dialog = builder.create();
+        dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        return dialog;
     }
 
     @Override

@@ -166,8 +166,7 @@ public class LoginDialog extends DialogFragment implements View.OnClickListener 
                     editor.putString("username", userProfile.getUsername());
                     editor.commit();
                 }
-
-                Snackbar.make(loginBtn, getString(R.string.login_message), Snackbar.LENGTH_LONG).show();
+                Toast.makeText(mActivity, getString(R.string.login_message), Toast.LENGTH_LONG).show();
                 dismiss();
             }
         }

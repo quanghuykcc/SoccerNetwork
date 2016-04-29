@@ -1,5 +1,6 @@
 package kcc.soccernetwork.fragments;
 
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -32,6 +34,7 @@ import java.util.List;
 import kcc.soccernetwork.R;
 import kcc.soccernetwork.activities.FieldActivity;
 import kcc.soccernetwork.adapters.FieldItemAdapter;
+import kcc.soccernetwork.dialogs.SearchFieldDialog;
 import kcc.soccernetwork.objects.FieldItem;
 import kcc.soccernetwork.objects.MatchItem;
 import kcc.soccernetwork.utils.DividerItemDecoration;
@@ -39,7 +42,7 @@ import kcc.soccernetwork.utils.RecyclerClickListener;
 import kcc.soccernetwork.utils.ServiceConnect;
 import kcc.soccernetwork.utils.UtilConstants;
 
-public class FragmentFields extends Fragment implements View.OnClickListener{
+public class FragmentFields extends Fragment implements View.OnClickListener, SearchFieldDialog.SearchFieldListener{
     RecyclerView fieldRecyclerView;
     ArrayList<FieldItem> fieldItemList;
     FieldItemAdapter fieldItemAdapter;
@@ -50,9 +53,23 @@ public class FragmentFields extends Fragment implements View.OnClickListener{
     }
 
     @Override
+    public void OnSearchField(String cityId, String districtId) {
+        if (!districtId.equals("")) {
+            new FieldGetterByDistrictTask().execute(districtId);
+        }
+
+    }
+
+    public void showSearchFieldDialog() {
+        DialogFragment searchFieldDialog = new SearchFieldDialog(getActivity(), this);
+        searchFieldDialog.show(getActivity().getFragmentManager(), "");
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_search_field:
+                showSearchFieldDialog();
                 break;
         }
     }
@@ -87,6 +104,43 @@ public class FragmentFields extends Fragment implements View.OnClickListener{
         }));
         new FieldGetterTask().execute();
         return view;
+    }
+
+
+    class FieldGetterByDistrictTask extends AsyncTask<String, Void, Void> {
+        @Override
+        protected void onPreExecute() {
+            loadingPgb.setVisibility(View.VISIBLE);
+            fieldItemAdapter.setFieldItemList(new ArrayList<FieldItem>());
+        }
+
+        @Override
+        protected Void doInBackground(String... params) {
+            try {
+                List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+                nameValuePairs.add(new BasicNameValuePair("tag", "get_field_by_district"));
+                nameValuePairs.add(new BasicNameValuePair("district_id", params[0]));
+                String jsonString = ServiceConnect.getJSONResponceFromUrl(UtilConstants.HOST_SERVICE, nameValuePairs);
+                Gson gson = new Gson();
+                JsonReader reader = new JsonReader(new StringReader(jsonString));
+                reader.setLenient(true);
+                fieldItemList = gson.fromJson(reader, new TypeToken<Collection<FieldItem>>(){}.getType());
+                fieldItemAdapter.setFieldItemList(fieldItemList);
+                return null;
+            }
+            catch (Exception ex) {
+                return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            loadingPgb.setVisibility(View.GONE);
+            if (fieldItemAdapter.getItemCount() == 0) {
+                Toast.makeText(getActivity(), "Không có sân bóng được tìm thấy", Toast.LENGTH_LONG).show();
+            }
+            fieldItemAdapter.notifyDataSetChanged();
+        }
     }
 
     class FieldGetterTask extends AsyncTask<Void, Void, Void> {

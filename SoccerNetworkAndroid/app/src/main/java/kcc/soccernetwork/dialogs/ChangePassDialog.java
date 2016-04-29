@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,6 +42,7 @@ public class ChangePassDialog extends DialogFragment implements View.OnClickList
     Button changePassBtn;
     Activity mActivity;
     ProgressBar pbgLoading;
+    String passwordNew = "";
     public ChangePassDialog(){super();}
     public ChangePassDialog(Activity activity){this.mActivity=activity;}
 
@@ -78,9 +81,15 @@ public class ChangePassDialog extends DialogFragment implements View.OnClickList
     private boolean checkValidate(String oldPassword, String newPassword, String confirmPassword) {
         boolean validate = true;
         if (oldPassword.equals("")) {
-            Toast.makeText(mActivity, "Chưa nhập mật khẩu cũ", Toast.LENGTH_LONG).show();
+            Toast.makeText(mActivity, "Chưa nhập mật khẩu hiện tại", Toast.LENGTH_LONG).show();
             validate = false;
         }
+
+        else if (!CheckLogin.getInstance().getLoginUser().getPassword().equals(oldPassword)) {
+            Toast.makeText(mActivity, "Mật khẩu hiện tại không chính xác", Toast.LENGTH_LONG).show();
+            validate = false;
+        }
+
         else if (newPassword.equals("")) {
             Toast.makeText(mActivity, "Chưa nhập mật khẩu mới", Toast.LENGTH_LONG).show();
             validate = false;
@@ -96,6 +105,11 @@ public class ChangePassDialog extends DialogFragment implements View.OnClickList
             validate = false;
         }
 
+        else if (newPassword.length() < 6) {
+            Toast.makeText(mActivity, "Mật khẩu không được dưới 6 ký tự", Toast.LENGTH_LONG).show();
+            validate = false;
+        }
+
         return validate;
     }
 
@@ -107,6 +121,7 @@ public class ChangePassDialog extends DialogFragment implements View.OnClickList
                 nameValuePairs.add(new BasicNameValuePair("tag", "change_password"));
                 nameValuePairs.add(new BasicNameValuePair("user_id", params[0]));
                 nameValuePairs.add(new BasicNameValuePair("password", params[1]));
+                passwordNew = params[1];
                 String jsonString = ServiceConnect.getJSONResponceFromUrl(UtilConstants.HOST_SERVICE, nameValuePairs);
                 Gson gson = new Gson();
                 JsonReader reader = new JsonReader(new StringReader(jsonString));
@@ -129,6 +144,12 @@ public class ChangePassDialog extends DialogFragment implements View.OnClickList
            if (responceMessage != null && responceMessage.getMessage() != null) {
                if (responceMessage.getCode() == 1) {
                    Toast.makeText(mActivity, "Thay đổi mật khẩu thành công", Toast.LENGTH_LONG).show();
+                   SharedPreferences preferences = getActivity().getSharedPreferences("remembered_user", Context.MODE_PRIVATE);
+                   if (!preferences.getString("password", "").equals("")) {
+                       SharedPreferences.Editor editor = preferences.edit();
+                       editor.putString("password", passwordNew);
+                       editor.commit();
+                   }
                    dismiss();
                }
                else {
