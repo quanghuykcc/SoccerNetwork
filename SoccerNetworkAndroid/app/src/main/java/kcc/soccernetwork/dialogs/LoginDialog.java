@@ -32,10 +32,12 @@ import java.util.Collection;
 import java.util.List;
 
 import kcc.soccernetwork.R;
+import kcc.soccernetwork.fragments.FragmentDrawer;
 import kcc.soccernetwork.objects.FieldItem;
 import kcc.soccernetwork.objects.UserProfile;
 import kcc.soccernetwork.utils.CheckLogin;
 import kcc.soccernetwork.utils.GCMClientManager;
+import kcc.soccernetwork.utils.LoadImageTask;
 import kcc.soccernetwork.utils.ServiceConnect;
 import kcc.soccernetwork.utils.UtilConstants;
 
@@ -119,11 +121,11 @@ public class LoginDialog extends DialogFragment implements View.OnClickListener 
     private boolean checkValidate(String username, String password) {
         boolean validate = true;
         if (username.equals("")) {
-            Snackbar.make(loginBtn, "Bạn cần nhập vào tên đăng nhập", Snackbar.LENGTH_LONG).show();
+            mUsernameEdt.setError("Bạn cần nhập tên đăng nhập");
             validate = false;
         }
         else if (password.equals("")) {
-            Snackbar.make(loginBtn, "Bạn cần nhập vào mật khẩu", Snackbar.LENGTH_LONG).show();
+            mPasswordEdt.setError("Bạn cần nhập nhập mật khẩu");
             validate = false;
         }
 
@@ -159,6 +161,10 @@ public class LoginDialog extends DialogFragment implements View.OnClickListener 
             }
             else {
                 CheckLogin.getInstance().setLoginUser(userProfile);
+                if (FragmentDrawer.mImageAvatar != null) {
+                    new LoadImageTask(getActivity(), FragmentDrawer.mImageAvatar, R.drawable.ic_profile).execute(UtilConstants.IMAGE_FOLDER_URL + CheckLogin.getInstance().getLoginUser().getAvatar_path());
+                }
+
                 if (mRememberUserCkb.isChecked()) {
                     SharedPreferences preferences = getActivity().getSharedPreferences("remembered_user", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = preferences.edit();

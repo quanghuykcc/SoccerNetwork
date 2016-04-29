@@ -21,7 +21,7 @@
     <string name="logout">Đăng xuất</string>
     <string name="not_yet_login">Bạn vẫn chưa đăng nhập</string>
     <string name="title_aboutus">About Us</string>
-    <string name="title_changepass">Change pass</string>
+    <string name="title_setting">Setting</string>
     <string name="title_editprofile">Edit Profile</string>
     <string name="titlehome">Soccer Network</string>
     <string name="logout_success">Bạn đã đăng xuất thành công</string>

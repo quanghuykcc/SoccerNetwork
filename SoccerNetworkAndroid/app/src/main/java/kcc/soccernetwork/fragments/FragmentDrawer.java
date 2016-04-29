@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +38,10 @@ public class FragmentDrawer extends Fragment {
     private DrawerLayout mDrawerLayout;
     private NavigationDrawerAdapter adapter;
     private View containerView;
+    public static ImageView mImageAvatar;
     private Activity activity;
     private FragmentDrawerListener drawerListener;
+    List<NavDrawerItem> data;
 
     public FragmentDrawer() {
 
@@ -49,7 +52,7 @@ public class FragmentDrawer extends Fragment {
     }
 
     public List<NavDrawerItem> getData() {
-        List<NavDrawerItem> data = new ArrayList<>();
+        data = new ArrayList<>();
 
         String titles[] = {
                 activity.getString(R.string.nav_item_home),
@@ -89,7 +92,7 @@ public class FragmentDrawer extends Fragment {
         // Inflating view layout
         View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
-
+        mImageAvatar = (ImageView) layout.findViewById(R.id.avatar_user);
         adapter = new NavigationDrawerAdapter(getActivity(), getData());
         recyclerView.setAdapter(adapter);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
@@ -111,7 +114,6 @@ public class FragmentDrawer extends Fragment {
 
         return layout;
     }
-
 
     public void setUp(int fragmentId, DrawerLayout drawerLayout, final Toolbar toolbar) {
         containerView = getActivity().findViewById(fragmentId);
