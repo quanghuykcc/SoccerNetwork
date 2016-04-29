@@ -81,7 +81,8 @@ public class ChangePassDialog extends DialogFragment implements View.OnClickList
     private boolean checkValidate(String oldPassword, String newPassword, String confirmPassword) {
         boolean validate = true;
         if (oldPassword.equals("")) {
-            Toast.makeText(mActivity, "Chưa nhập mật khẩu hiện tại", Toast.LENGTH_LONG).show();
+            mOldPass.setError("Bạn chưa nhập mật khẩu hiện tại");
+//            Toast.makeText(mActivity, "Chưa nhập mật khẩu hiện tại", Toast.LENGTH_LONG).show();
             validate = false;
         }
 
@@ -91,22 +92,26 @@ public class ChangePassDialog extends DialogFragment implements View.OnClickList
         }
 
         else if (newPassword.equals("")) {
-            Toast.makeText(mActivity, "Chưa nhập mật khẩu mới", Toast.LENGTH_LONG).show();
+            mNewPass.setError("Bạn chưa nhập mật khẩu mới");
+//            Toast.makeText(mActivity, "Chưa nhập mật khẩu mới", Toast.LENGTH_LONG).show();
             validate = false;
         }
 
         else if (confirmPassword.equals("")) {
-            Toast.makeText(mActivity, "Chưa nhập xác nhận mật khẩu mới", Toast.LENGTH_LONG).show();
+            mComfirmPass.setError("Bạn chưa nhập xác nhận mật khẩu mới");
+//            Toast.makeText(mActivity, "Chưa nhập xác nhận mật khẩu mới", Toast.LENGTH_LONG).show();
             validate = false;
         }
 
         else if (!confirmPassword.equals(newPassword)) {
-            Toast.makeText(mActivity, "Mật khẩu xác nhận và mật khẩu mới không giống nhau", Toast.LENGTH_LONG).show();
+            mComfirmPass.setError("Mật khẩu chưa khớp với mật khẩu ở trên");
+//            Toast.makeText(mActivity, "Mật khẩu xác nhận và mật khẩu mới không giống nhau", Toast.LENGTH_LONG).show();
             validate = false;
         }
 
         else if (newPassword.length() < 6) {
-            Toast.makeText(mActivity, "Mật khẩu không được dưới 6 ký tự", Toast.LENGTH_LONG).show();
+            mNewPass.setError("Mật khẩu phải hơn 6 kí tự");
+//            Toast.makeText(mActivity, "Mật khẩu không được dưới 6 ký tự", Toast.LENGTH_LONG).show();
             validate = false;
         }
 

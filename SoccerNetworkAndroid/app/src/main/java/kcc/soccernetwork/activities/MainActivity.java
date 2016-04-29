@@ -1,11 +1,9 @@
 package kcc.soccernetwork.activities;
 
 import android.app.DialogFragment;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -30,11 +28,11 @@ import java.util.List;
 
 import kcc.soccernetwork.R;
 import kcc.soccernetwork.dialogs.LoginDialog;
-import kcc.soccernetwork.fragments.FragmentDrawer;
+import kcc.soccernetwork.fragments.FragmentAboutUs;
 import kcc.soccernetwork.fragments.FragmentChangePass;
+import kcc.soccernetwork.fragments.FragmentDrawer;
 import kcc.soccernetwork.fragments.FragmentEditProfile;
 import kcc.soccernetwork.fragments.FragmentHomeSoccer;
-import kcc.soccernetwork.fragments.FragmentAboutUs;
 import kcc.soccernetwork.objects.ResponceMessage;
 import kcc.soccernetwork.objects.UserProfile;
 import kcc.soccernetwork.utils.CheckLogin;
@@ -173,7 +171,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 break;
             case 3:
                 fragment = new FragmentChangePass();
-                title = getString(R.string.title_changepass);
+                title = getString(R.string.title_setting);
                 break;
             case 4:
                 fragment = new FragmentAboutUs();

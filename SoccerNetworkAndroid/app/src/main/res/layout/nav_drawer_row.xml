@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="horizontal"
-    android:layout_margin="@dimen/item_drawer"
-    android:layout_marginTop="10dp"
-    android:layout_height="wrap_content"
+    android:layout_height="70dp"
     android:background="@drawable/selected_row"
     android:clickable="true">
 
@@ -13,6 +11,8 @@
         android:layout_marginLeft="10dp"
         android:layout_height="30dp"
         android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:gravity="left"
         android:layout_marginRight="10dp"
         android:id="@+id/imv_nav_item" />
 
@@ -24,6 +24,7 @@
         android:layout_gravity="center"
         android:gravity="left"
         android:textSize="16sp"
+        android:textColor="@color/colorPrimaryDark"
          />
 
 </LinearLayout>

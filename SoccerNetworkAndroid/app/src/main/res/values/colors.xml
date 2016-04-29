@@ -14,4 +14,5 @@
     <color name="color_button_login">#05BA88</color>
     <color name="color_bg_listview_item">#FFFFFF</color>
     <color name="color_bg_listview">#FFFFFF</color>
+    <color name="color_selected_row">#D1D1D1</color>
 </resources>
