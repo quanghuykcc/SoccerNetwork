@@ -74,16 +74,18 @@
 		
 
 		function delete_match($match_id,$user_id) {
+			require_once 'util_function.php';
+			$uf = new UTIL_FUNCTION();
 			mysql_query("set names 'utf8'");
 			$result = mysql_query("DELETE FROM matches WHERE match_id = '$match_id'");
 			if ($result) {
 
-				$user_posted = mysql_query("SELECT us.gcm_reg_id, us.full_name 
+				$user_joined = mysql_query("SELECT us.gcm_reg_id, us.full_name 
         					FROM slots sl join user_profiles us ON us.user_id = sl.user_id WHERE match_id = '$match_id'");
-				while($row=mysql_fetch_array($user_posted)
+				while($row=mysql_fetch_array($user_joined))
         		{
-				$gcm_reg_id = mysql_result($row[0]);
-        		$full_name = mysql_result($row[1]);
+				$gcm_reg_id = $row['gcm_reg_id'];
+        		$full_name = $row['full_name'];
         		$message = "'$full_name' vừa hủy trận đấu của anh ấy.";
 	        	$uf->send_push_notification($gcm_reg_id, $message);
                 }
